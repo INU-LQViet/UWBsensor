@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/letter-l-svgrepo-com.svg" type="image/icon type">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>UWB test</title>
+</head>
+<body>
+    <header>
+        <p><u>Infor: </u>This is a webapplication for a UWB sensor. For more information, please follow the link : <a>github.com</a></p>
+    </header>
+    <main>
+        <div class="data-container">
+            <div class="btn-new">
+                <button id="new-btn">NEW</button>
+            </div>
+            <div class="select-contain">
+                <label for="previousEXP">Choose previous experiment data:</label>
+                <select name="previousEXP" id="previousEXP">
+                    <option value=""> ... </option>
+                </select>
+                <button id="select-btn">SELECT</button>
+            </div>
+        </div>
+        <div class="canvas-container" id="canvas-container">
+            <div id="canvas">
+                <canvas id="mycanvas">This browser doesn't support!</canvas>
+            </div>
+            <div class="target-container">
+                <div class="target-title-container">
+                    <p>Postion of Target : </p>
+                </div>
+                <div class="target-position-container">
+                    <p id="Xposition">X: <span id="X-span"></span></p>
+                    <p id="Yposition">Y: <span id="Y-span"></span></p>
+                </div>
+            </div>
+            <div class="button-contain">
+                <button id="start-canvas-btn">START</button>
+                <button id="save-canvas-btn">SAVE</button>
+                <button id="close-canvas-btn">CLOSE</button>
+            </div>  
+        </div>
+        <div id="newGripForm-container" class="newForm-container">
+            <div id="new-Form" class="new-form">
+                <div class="form-container-header">
+                    <div class="top-button">
+                        <button class="close" id="closeGrip-btn">CLOSE</button>
+                    </div>
+                    <div id="title-container">
+                        <h1>Building Walls</h1>
+                    </div>
+                </div>
+                <div class="form-container-main">
+                    <div class="form-container">
+                        <label for="nameExp">Name of experiment: </label>
+                        <br></br>
+                        <input type="text" id="nameExp" name="nameExp" required="required"></input>
+                        <br></br>
+                        <label for="widthSquare">Width of Rectangle (a-millimeter): </label>
+                        <br></br>
+                        <input type="number" id="widthSquare" name="widthSquare" required="required"></input>
+                        <br></br>
+                        <label for="lengthSquare">Length of Rectangle (b-millimeter): </label>
+                        <br></br>
+                        <input type="number" id="lengthSquare" name="lengthSquare" required="required"></input>
+                        <br></br>
+                        <input type="hidden" name="type" value="REC"></input>
+                            <button type="submit" value="Submit">SUBMIT</button>
+                    </div>
+                    <div class="guideIMG-container">
+                        <figure class="img-anchor">
+                            <img src="img/rectangle.jpg" alt="web's app principle">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Author: Luong Quoc Viet. Contact: lqviet@inu.ac.kr</p>
+    </footer>
+    <script type="module" src="js/mainpage.js" defer></script>
+</body>
+</html>
